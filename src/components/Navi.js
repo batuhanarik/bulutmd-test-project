@@ -3,12 +3,12 @@ const NaviBar = () => {
   return (
     <div>
       <div className="bg-black w-full component-preview items-center justify-center gap-2 font-sans">
-        <Navbar className="justify-between shadow-xl ml-2">
+        <Navbar className="justify-between shadow-xl ml-3">
           <Button
             className="bg-black border-none text-2xl normal-case"
             color="white"
           >
-            BulutMD
+            <a href="https://www.bulutmd.com" target={'_blank'}>BulutMD</a>
           </Button>
 
           <div>
@@ -23,7 +23,7 @@ const NaviBar = () => {
         </Navbar>
       </div>
       <div className="grid bg-gray-600 w-full h-16 content-center">
-        <span className="text-white text-2xl normal-case ml-8">Popüler Başlıklar</span>
+        <span className="text-white text-2xl normal-case ml-9">Popüler Başlıklar</span>
       </div>
     </div>
   );

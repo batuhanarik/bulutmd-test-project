@@ -1,8 +1,11 @@
-import './App.css';
+import "./App.css";
+import Homescreen from "./screens/Homescreen";
 
 function App() {
   return (
-    <span>Hello React!</span>
+    <div>
+      <Homescreen/>
+    </div>
   );
 }
 

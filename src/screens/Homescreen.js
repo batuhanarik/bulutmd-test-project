@@ -1,18 +1,18 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import Card from "../components/Card";
+import Filter from "../components/Filter";
 import Footer from "../components/Footer";
 import NaviBar from "../components/Navi";
 
-const Homescreen = (props) => {
-  const navigate = useNavigate();
+const HomeScreen = (props) => {
   useEffect(()=>{
-    console.log(props);
+    console.warn(window.location.pathname)
   })
   return (
     <div className="overflow-x-hidden">
       <NaviBar />
-      <div className="md:max-2xl:flex">
+    {window.location.pathname==='/' && <Filter/>}
+      <div className="md:max-2xl:flex lg:flex xl:flex">
         <Card naviUrl={'movies'} subText={"Film"} />
         <Card naviUrl={'series'} subText={"Dizi"} />
       </div>
@@ -21,4 +21,4 @@ const Homescreen = (props) => {
   );
 };
 
-export default Homescreen;
+export default HomeScreen;

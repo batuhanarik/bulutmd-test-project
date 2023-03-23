@@ -1,8 +1,10 @@
 import "./App.css";
-import Homescreen from "./screens/Homescreen";
+import HomeScreen from "./screens/HomeScreen";
+import HomeLayout from "./screens/HomeLayout";
 import data from "./data/sample.json";
 import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import EntriesScreen from "./screens/EntriesScreen";
 
 function App() {
   //Filter metodu ile dizi ve filmler ayrı dizilere atandı.
@@ -14,16 +16,16 @@ function App() {
   });
 
   useEffect(() => {
-    console.log(movies);
-    console.log(series);
+    // console.log(movies);
+    // console.log(series);
   });
 
   return (
     <Routes>
-      <Route path="/" element={<Homescreen />} />
+      <Route path="/" element={<HomeLayout />} />
       <Route path="entries">
-        <Route path="movies" element={<Homescreen />} />
-        <Route path="series" element={<Homescreen />} />
+        <Route path="movies" element={<EntriesScreen entries={movies} />} />
+        <Route path="series" element={<EntriesScreen entries={series} />} />
       </Route>
     </Routes>
   );

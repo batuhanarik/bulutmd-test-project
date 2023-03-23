@@ -9,7 +9,7 @@ const Filter = () => {
         />
         
         <select className="select select-accent max-sm:mx-auto max-sm:w-11/12 text-center text-xl border-l-blue-400 mr-12">
-          <option selected>
+          <option defaultValue={'Sırala'}>
             Sırala
           </option>
           <option>Yeniye Göre Sırala</option>

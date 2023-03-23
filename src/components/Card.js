@@ -1,6 +1,9 @@
-const Card = ({subText}) => {
+import { useNavigate } from "react-router-dom";
+
+const Card = ({subText,naviUrl}) => {
+  const navigate = useNavigate();
   return (
-    <div className="my-5 mx-10 cursor-pointer  text-center">
+    <div onClick={()=>{navigate(`/entries/${naviUrl}`)}} className="my-5 mx-10 cursor-pointer  text-center">
       <div className="card w-68 h-68 bg-transparent sm:w-full">
         <figure>
           <img

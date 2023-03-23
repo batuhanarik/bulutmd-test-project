@@ -10,7 +10,7 @@ const Card = ({subText}) => {
           />
         </figure>
       </div>
-      <span className="text-2xl py-5 place-content-center">{subText}</span>
+      <span className="text-2xl place-content-center">{subText}</span>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { Navbar, Button } from "react-daisyui";
+import PopularTitles from "./PopularTitles";
 const NaviBar = () => {
   return (
     <div>
@@ -8,7 +9,9 @@ const NaviBar = () => {
             className="bg-black border-none text-2xl normal-case"
             color="white"
           >
-            <a href="https://www.bulutmd.com" target={'_blank'}>BulutMD</a>
+            <a href="https://www.bulutmd.com" target={"_blank"}>
+              BulutMD
+            </a>
           </Button>
 
           <div>
@@ -22,9 +25,7 @@ const NaviBar = () => {
           </div>
         </Navbar>
       </div>
-      <div className="grid bg-gray-600 w-full h-16 content-center">
-        <span className="text-white text-2xl normal-case ml-9">Popüler Başlıklar</span>
-      </div>
+   <PopularTitles/>
     </div>
   );
 };

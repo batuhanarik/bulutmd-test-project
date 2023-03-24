@@ -1,6 +1,5 @@
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
-import HomeLayout from "./screens/HomeLayout";
 import data from "./data/sample.json";
 import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
@@ -16,16 +15,15 @@ function App() {
   });
 
   useEffect(() => {
-    // console.log(movies);
-    // console.log(series);
+
   });
 
   return (
     <Routes>
-      <Route path="/" element={<HomeLayout />} />
+      <Route path="/" element={<HomeScreen data={data}/>} />
       <Route path="entries">
-        <Route path="movies" element={<EntriesScreen entries={movies} />} />
-        <Route path="series" element={<EntriesScreen entries={series} />} />
+        <Route path="movies" element={<EntriesScreen type={'movies'} entries={movies} />} />
+        <Route path="series" element={<EntriesScreen type={'series'} entries={series} />} />
       </Route>
     </Routes>
   );

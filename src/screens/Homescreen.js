@@ -1,20 +1,25 @@
 import { useEffect } from "react";
 import Card from "../components/Card";
-import Filter from "../components/Filter";
 import Footer from "../components/Footer";
 import NaviBar from "../components/Navi";
 
-const HomeScreen = (props) => {
-  useEffect(()=>{
-    console.warn(window.location.pathname)
-  })
+const HomeScreen = ({ data }) => {
+  useEffect(() => {
+  });
+  const filmCard = {
+    type: "Film",
+    image: data.entries[0].images["Poster Art"].url,
+  };
+  const seriesCard = {
+    type: "Dizi",
+    image: data.entries[1].images["Poster Art"].url,
+  };
   return (
     <div className="overflow-x-hidden">
       <NaviBar />
-    {window.location.pathname==='/' && <Filter/>}
       <div className="md:max-2xl:flex lg:flex xl:flex">
-        <Card naviUrl={'movies'} subText={"Film"} />
-        <Card naviUrl={'series'} subText={"Dizi"} />
+        <Card naviUrl={"movies"} cardInfo={filmCard} />
+        <Card naviUrl={"series"} cardInfo={seriesCard} />
       </div>
       <Footer />
     </div>

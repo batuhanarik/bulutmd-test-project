@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const Card = ({subText,naviUrl}) => {
+const Card = ({cardInfo,naviUrl}) => {
   const navigate = useNavigate();
   return (
     <div onClick={()=>{navigate(`/entries/${naviUrl}`)}} className="my-4 mx-10 cursor-pointer  text-center">
@@ -8,12 +8,12 @@ const Card = ({subText,naviUrl}) => {
         <figure>
           <img
             className="object-cover rounded-xl"
-            src="https://upload.wikimedia.org/wikipedia/en/e/eb/Wolfcreek.png"
-            alt="Shoes"
+            src={`${cardInfo.image}`}
+            alt={`${cardInfo.type}`}
           />
         </figure>
       </div>
-      <span className="text-2xl place-content-center">{subText}</span>
+      <span className="text-2xl place-content-center">{cardInfo.type}</span>
     </div>
   );
 };

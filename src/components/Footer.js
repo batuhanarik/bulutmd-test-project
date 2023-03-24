@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="flex flex-col sm:relative md:absolute lg:absolute xl:absolute 2xl:absolute w-full bottom-0 p-1 bg-neutral text-neutral-content">
+    <footer className="flex flex-col fixed  w-full bottom-0 p-1 bg-neutral text-neutral-content">
       <div className="inline-block mx-7 max-sm:text-sm max-sm:mx-4 max-sm:text-center">
         <span className="">Anasayfa | </span>
         <span className="">Kullanıcı Sözleşmesi | </span>

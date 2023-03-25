@@ -1,10 +1,10 @@
 import EntryCard from "./EntryCard";
 
-const EntryCards = ({ entries }) => {
-    const entries2 = entries();
+const EntryCards = ({ filteredEntries }) => {
+    console.log(filteredEntries);
   return (
     <div>
-      {entries2.map((entry, idx) => {
+      {filteredEntries.map((entry, idx) => {
         return <EntryCard key={idx} cardInfo={entry} />;
       })}
     </div>

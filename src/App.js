@@ -1,7 +1,6 @@
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
 import data from "./data/sample.json";
-import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import EntriesScreen from "./screens/EntriesScreen";
 
@@ -14,9 +13,6 @@ function App() {
     return movie.programType === "series";
   });
 
-  useEffect(() => {
-
-  });
 
   return (
     <Routes>

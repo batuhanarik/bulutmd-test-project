@@ -1,18 +1,25 @@
-import { useEffect } from "react";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
 import NaviBar from "../components/Navi";
 
 const HomeScreen = ({ data }) => {
-  useEffect(() => {
+  //Anasayfadaki kartların resimlerin dinamik ve program tipine göre olması için filtreleme
+  const movieData = data.entries.filter((entry) => {
+    return entry.programType === "movie";
   });
+  const seriesData = data.entries.filter((entry) => {
+    return entry.programType === "series";
+  });
+  //Anasayfadaki kartların içini doldurmak için kullanılan değişkenler
   const filmCard = {
     type: "Film",
-    image: data.entries[0].images["Poster Art"].url,
+    image:
+      movieData[Math.floor(Math.random() * 10) + 1].images["Poster Art"].url,
   };
   const seriesCard = {
     type: "Dizi",
-    image: data.entries[1].images["Poster Art"].url,
+    image:
+      seriesData[Math.floor(Math.random() * 10) + 1].images["Poster Art"].url,
   };
   return (
     <div className="overflow-x-hidden">

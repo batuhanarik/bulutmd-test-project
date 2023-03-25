@@ -1,16 +1,16 @@
-const EntryCard = ({cardInfo,idx}) => {
+const EntryCard = ({ cardInfo, idx }) => {
   return (
-    <div key={idx} className="my-4 mx-10  text-center">
-      <div className="card mx-auto w-3/5 bg-transparent sm:w-full">
+    <div key={idx} className="my-4 mx-10 text-center">
+      <div className="card mx-auto  bg-transparent sm:w-full">
         <figure>
           <img
             className="rounded-xl w-80 h-80"
-            src={`${cardInfo.images['Poster Art'].url}`}
-            alt='img'
+            src={`${cardInfo.images["Poster Art"].url}`}
+            alt="img"
           />
         </figure>
       </div>
-      <span className="text-2xl place-content-center">{cardInfo.title}</span>
+      <span className="text-2xl place-content-center">{cardInfo.releaseYear} - {cardInfo.title}</span>
     </div>
   );
 };

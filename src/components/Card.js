@@ -7,7 +7,7 @@ const Card = ({cardInfo,naviUrl}) => {
       <div className="card mx-auto w-3/5 bg-transparent sm:w-full">
         <figure>
           <img
-            className="object-cover rounded-xl"
+            className="w-80 h-80 object-cover rounded-xl"
             src={`${cardInfo.image}`}
             alt={`${cardInfo.type}`}
           />

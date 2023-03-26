@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 const Card = ({cardInfo,naviUrl}) => {
   const navigate = useNavigate();
   return (
-    <div onClick={()=>{navigate(`/entries/${naviUrl}`)}} className="my-4 mx-10 cursor-pointer  text-center">
-      <div className="card mx-auto w-3/5 bg-transparent sm:w-full">
+    <div onClick={()=>{navigate(`/entries/${naviUrl}`)}} className="my-4 mx-10 cursor-pointer text-center">
+      <div className="card mx-auto w-4/5 bg-transparent">
         <figure>
           <img
-            className="w-80 h-80 object-cover rounded-xl"
+            className="w-80 h-72 object-cover rounded-xl"
             src={`${cardInfo.image}`}
             alt={`${cardInfo.type}`}
           />

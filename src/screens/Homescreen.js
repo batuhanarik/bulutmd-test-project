@@ -22,7 +22,7 @@ const HomeScreen = ({ data }) => {
       seriesData[Math.floor(Math.random() * 10) + 1].images["Poster Art"].url,
   };
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden mb-16">
       <NaviBar />
       <div className="md:max-2xl:flex lg:flex xl:flex">
         <Card naviUrl={"movies"} cardInfo={filmCard} />

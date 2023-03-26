@@ -2,9 +2,9 @@ const Footer = () => {
   return (
     <footer className="flex flex-col fixed  w-full bottom-0 p-1 bg-neutral text-neutral-content">
       <div className="inline-block mx-7 max-sm:text-sm max-sm:mx-4 max-sm:text-center">
-        <span className="">Anasayfa | </span>
-        <span className="">Kullanıcı Sözleşmesi | </span>
-        <span className="">Gizlilik Sözleşmesi</span>
+        <span>Anasayfa | </span>
+        <span>Kullanıcı Sözleşmesi | </span>
+        <span>Gizlilik Sözleşmesi</span>
       </div>
       <div className="p-3 mx-4 flex flex-row gap-4 max-sm:justify-center">
         <a>

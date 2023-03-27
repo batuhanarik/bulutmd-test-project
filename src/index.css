@@ -16,5 +16,12 @@ code {
     monospace;
 }
 .w-80{
-  width:19rem;
+  width:15rem;
+}
+.h-80{
+  height: 18rem;
+}
+.mx-6{
+  margin-left: 1.3rem;
+  margin-right: 1.3rem;
 }

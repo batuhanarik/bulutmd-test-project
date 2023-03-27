@@ -1,6 +1,6 @@
 const EntryCard = ({ cardInfo, idx }) => {
   return (
-    <div key={idx} className="my-4 mx-10 text-center">
+    <div key={idx} className="my-4 mx-6 text-center">
       <div className="card mx-auto bg-transparent sm:w-full">
         <figure>
           <img
